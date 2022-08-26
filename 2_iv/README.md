@@ -1,19 +1,20 @@
 # Instrumental Variables Estimation
 
-We compute power for different sample size, and effect size, and stores them in a matrix whose columns are the effect size, and the rows the sample size.	Each cell in each matrix stores the statistical power.
+We compute power for different sample size, and effect size, and stores them in a matrix whose columns are the effect size, and the rows the sample size. Each cell in each matrix stores the statistical power.
 
 A 2SLS (IV) model is considered
 			
-$$X = \alpha_{FS} + \beta_{FS} Z + \epsilon_{FS} (1)$$
-$$Y = \alpha_{2SLS} + \beta_{2SLS} \hat{X} + \epsilon_{2SLS} (2)$$
+$$X = \alpha_{FS} + \beta_{FS} Z + \epsilon_{FS} \ldots\ldots\ldots (1)$$
+
+$$Y = \alpha_{2SLS} + \beta_{2SLS} \hat{X} + \epsilon_{2SLS} \ldots\ldots\ldots (2)$$
 
 where $\hat{X}$ are the predicted values from (1), also known as First Stage.
 
 As well as a 2SLS (CF) model
 			
-$$P(X = 1 | Z) = \Phi(z\beta_{FS}) (1)$$
+$$P(X = 1 | Z) = \Phi(z\beta_{FS}) \ldots\ldots\ldots (1)$$
 
-$$Y = \alpha_{CF} + \beta_{CF} X + \delta_{CF}(X\lambda(z\beta_{FS})-(1-X)\lambda(-z\beta_{FS})) + u	(2)$$
+$$Y = \alpha_{CF} + \beta_{CF} X + \delta_{CF}(X\lambda(z\beta_{FS})-(1-X)\lambda(-z\beta_{FS})) + u \ldots\ldots\ldots	(2)$$
 				
 where the first equation denotes a probit model and \lambda(.) is the well-known inverse Mills ratio - X\lambda(z\beta_{FS})-(1-X)\lambda(-z\beta_{FS}) is usually known as a 'generalized error'. As noted by Wooldrige (2015), bootstraped s.e. are computed. We need to do this because we are running these as separate	regressions and, in effect, the residual from the first regression is an estimated value. 
 				
