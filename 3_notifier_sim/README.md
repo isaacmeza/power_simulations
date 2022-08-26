@@ -10,6 +10,8 @@ $$\mathbb{E}[p_{\text{baseline}}]=\frac{a}{a+b}$$
 
 , and 
 
+$$V[p_{\text{baseline}}] = \frac{ab}{(a+b)^2(a+b+1)]$$
+
 $$V[p_{\text{baseline}}]=\frac{ab}{(a+b)^2(a+b+1)}$$. 
 
 Moreover, each casefile has associated a region r, which has a differential fixed effect of $\bar{\alpha_r}$, and a notifier n which has a differential fixed effect of $\bar{\gamma_n}$. 
