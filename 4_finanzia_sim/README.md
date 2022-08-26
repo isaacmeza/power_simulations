@@ -6,11 +6,9 @@ We run power simulations for the main specification in [Expanding Financial Acce
 
 In particular, for different effect sizes $\beta_t$, and $\gamma_t$, we will be producing synthetic data and estimating the main specification (\ref{main_spec}) on this simulated data to approximate its power.
 
-\begin{align}
-\label{main_spec}
-    Y_{it} = \alpha_{t} + \beta_t 1(MP_i = 10\%) + \gamma_t(45\%-r_i)/30\% + \epsilon_{it}
-\end{align}
-
+$$
+Y_{it} = \alpha_{t} + \beta_t 1(MP_i = 10\%) + \gamma_t(45\%-r_i)/30\% + \epsilon_{it}
+$$
 	
 We will be assuming that the effects of minimum payments and interest rates are separable and that the effect of interest rate changes is linear.
 
