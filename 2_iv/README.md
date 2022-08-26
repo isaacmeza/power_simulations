@@ -23,9 +23,9 @@ $$X\lambda(z\beta_{FS})-(1-X)\lambda(-z\beta_{FS})$$
 is usually known as a 'generalized error'. As noted by Wooldrige (2015), bootstraped s.e. are computed. We need to do this because we are running these as separate regressions and, in effect, the residual from the first regression is an estimated value. 
 				
 The variables denote the following
-			Z - exogenous randomization (treatment variable)
-			X - take-up variable
-			Y - dummy dependent variable/continuous dependent variable
+- Z - exogenous randomization (treatment variable)
+- X - take-up variable
+- Y - dummy dependent variable/continuous dependent variable
 			
 The interpretation is as follows:
 
