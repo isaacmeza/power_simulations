@@ -6,8 +6,9 @@ Computes power for different sample size and effect size, and stores them in a m
 $$X = \alpha_{FS} + \beta_{FS} Z + \epsilon_{FS}$$
 			
 The variables denote the following
-			Z - exogenous randomization (treatment variable)
-			X - dummy dependent variable
+
+- Z - exogenous randomization (treatment variable)
+- X - dummy dependent variable
 			
 The interpretation is as follows:
 
