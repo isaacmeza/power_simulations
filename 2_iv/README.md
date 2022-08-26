@@ -16,7 +16,11 @@ $$P(X = 1 | Z) = \Phi(z\beta_{FS}) \ldots\ldots\ldots (1)$$
 
 $$Y = \alpha_{CF} + \beta_{CF} X + \delta_{CF}(X\lambda(z\beta_{FS})-(1-X)\lambda(-z\beta_{FS})) + u \ldots\ldots\ldots	(2)$$
 				
-where the first equation denotes a probit model and \lambda(.) is the well-known inverse Mills ratio - X\lambda(z\beta_{FS})-(1-X)\lambda(-z\beta_{FS}) is usually known as a 'generalized error'. As noted by Wooldrige (2015), bootstraped s.e. are computed. We need to do this because we are running these as separate	regressions and, in effect, the residual from the first regression is an estimated value. 
+where the first equation denotes a probit model and $\lambda(.)$ is the well-known inverse Mills ratio 
+
+$$X\lambda(z\beta_{FS})-(1-X)\lambda(-z\beta_{FS})$$
+
+is usually known as a 'generalized error'. As noted by Wooldrige (2015), bootstraped s.e. are computed. We need to do this because we are running these as separate regressions and, in effect, the residual from the first regression is an estimated value. 
 				
 The variables denote the following
 			Z - exogenous randomization (treatment variable)
