@@ -15,7 +15,7 @@ $$
 We will be assuming that the effects of minimum payments and interest rates are separable and that the effect of interest rate changes is linear.
 
 
---
+---
 
 ## DGP
 
@@ -96,6 +96,6 @@ and we compute power for the null
 $$H_0 : \beta_{5,15} =  \beta_{5,45}$$
 
 
---
+---
 
 This folder includes implementation in STATA and also in R. R makes uses of parallelization packages.
