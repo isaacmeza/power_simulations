@@ -2,9 +2,11 @@
 
 We run power simulations for the main specification in [Expanding Financial Access Via Credit Cards:Evidence from Mexico](www.diegojimenezh.com/assets/pdf/creditcards_main.pdf)
 
+--
+--
 
 
-In particular, for different effect sizes $\beta_t$, and $\gamma_t$, we will be producing synthetic data and estimating the main specification (\ref{main_spec}) on this simulated data to approximate its power.
+For different effect sizes $\beta_t$, and $\gamma_t$, we will be producing synthetic data and estimating the main specification on this simulated data to approximate its power.
 
 $$
 Y_{it} = \alpha_{t} + \beta_t 1(MP_i = 10) + \gamma_t(45-r_i)/30 + \epsilon_{it}
@@ -12,13 +14,15 @@ $$
 	
 We will be assuming that the effects of minimum payments and interest rates are separable and that the effect of interest rate changes is linear.
 
+--
+--
 
-
+## DGP
 
 Data generation process is as follows:	We have 143916 individuals followed during 27 months in the experimental phase. Each of this individuals will have one of nine equally probable possible payment profiles. This profiles will serve as both strata and weights when estimating equation (\ref{main_spec}). Moreover, every individual will be assigned to a minimum payment arm (5\%/10\%) and an interest rate arm (15\%/25\%/35\%/45\%) - each of this drawn from a discrete uniform distribution.
 
 
-### $Y_{it}$ - Cumulative default
+## $Y_{it}$ - Cumulative default
 
 
 When $Y_{it}$ is defined to be the cumulative default, the model for the DGP can be described as follows:
@@ -91,4 +95,7 @@ and we compute power for the null
 
 $$H_0 : \beta_{5,15} =  \beta_{5,45}$$
 
+--
+--
 
+This folder includes implementation in STATA and also in R. R makes uses of parallelization packages.
