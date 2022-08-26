@@ -21,4 +21,7 @@ $$\mathbb{E}[Y|X]=\theta^{\mathsf{T}}X$$
 
 In general, we will describe (approximate) power as a function of sample size and effect size, and it will be a non-decreasing function in this two arguments.
 
+
+![Power](https://raw.githubusercontent.com/isaacmeza/power_simulations/main/pwr.png)
+
 In this repository you can find several examples of power simulations of varying complexity.
