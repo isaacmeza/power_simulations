@@ -26,7 +26,7 @@ When $Y_{it}$ is defined to be the cumulative default, the model for the DGP can
 
 1. Default ($Y_i$) is drawn from a $\operatorname{Ber}(p_i)$ distribution for every individual, where the propensity to default $p_i$ is described as
 
-$$p_i = \mathcal{N}(\mu_{\text{baseline}},\sigma_{\text{baseline}})+ \mathcal{N}(\beta_{MP},\sigma_{MP})\times 1(MP_i = 10\%)+ \mathcal{N}(\gamma_{r},\sigma_{r})\times (45\%-r_i)/30\%$$
+$$p_i = \mathcal{N}(\mu_{\text{baseline}},\sigma_{\text{baseline}})+ \mathcal{N}(\beta_{MP},\sigma_{MP})\times 1(MP_i = 10%)+ \mathcal{N}(\gamma_{r},\sigma_{r})\times (45%-r_i)/30%$$
 
     
 2. Conditional on default, the month ($\bar{t}\in[1,27]$) where individual $i$ defaults is simulated from a categorical distribution. We assume that the time of default is independent (or at least has no correlation) of treatment status.
