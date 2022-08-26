@@ -1,6 +1,6 @@
 # Finanzia power simulation 
 
-We run power simulations for the main specification in [Expanding Financial Access Via Credit Cards:Evidence from Mexico](www.diegojimenezh.com/assets/pdf/creditcards_main.pdf)
+We run power simulations for the main specification in [Expanding Financial Access Via Credit Cards : Evidence from Mexico](www.diegojimenezh.com/assets/pdf/creditcards_main.pdf)
 
 
 ---
