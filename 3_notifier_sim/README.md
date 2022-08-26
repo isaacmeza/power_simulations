@@ -1,27 +1,21 @@
-# Power simulation 
+# Notifiers experiment power simulation
 
-Statistical power $(1-\beta)$ refers to the likelihood/probability of detecting an effect where a non-zero effect is present, i,e. given a null $H_0 : \theta = 0$, and its alternative $H_1 : \theta \neq 0$, the power is defined as
+We have $r=1,\ldots, 25$, $\operatorname{Poisson}(\mu_r)$, number of cases per each day-region to be loaded for notification. Each casefile itself has a $\operatorname{Poisson}(\mu_d)$ number of defendants. Hence, the number of 'diligencias' per working day follows a compound Poisson distribution : $\sum^{\sum_{r} \operatorname{Poisson}(\mu_r)} \operatorname{Poisson}(\mu_d)$. 
 
-$$1-\beta = \Pr(\text{reject } H_0 | H_1  \text{ is true})$$
+Casefiles are assigned randomly (with probability $p_{treat}$) within regions to the treatment arm. 
 
-To estimate the power of our main specification, we use Monte Carlo simulation by replicating the data generating process of our experiment:
+Baseline probability, $p_{baseline}$, of successful notification follows a $\operatorname{Beta}(a,b)$ distribution, with parameters calibrated such that $\mathbb{E}[p_{baseline}]=\frac{a}{a+b}$ , and $\operatorname{V}[p_{baseline}]=\frac{ab}{(a+b)^2(a+b+1)}$. 
 
-$$(X,Y)\sim F$$
+Moreover, each casefile has associated a region $r$, which has a differential fixed effect of $\bar{\alpha_r}$, and a notifier $n$ which has a differential fixed effect of $\bar{\gamma_n}$. 
 
-where F is a very general distribution and can be as complex as desired.
+Assignment to treatment (ATT) has a (random) treatment effect that is normally distributed $N(\mu_\beta,\sigma^2_{\beta})$. 
 
-Given this synthetic data, together with an identification method we will estimate the parameters of interest of the model and compute its power.
-For instance, we might use a linear conditional mean model:
+In sum, the model for the DGP is 
 
-$$\mathbb{E}[Y|X]=\theta^{\mathsf{T}}X$$
+$$Y_i = 1( U[0,1]_i < \text{Beta}(a,b)_i + \bar{\alpha_r} + \bar{\gamma_n} + N(\mu_\beta,\sigma^2_{\beta})_i 1(i \text{ is Rotator}) )$$
 
+and we estimate it using the following specification
 
-![Type error](https://raw.githubusercontent.com/isaacmeza/power_simulations/main/table_type_error.png)
+$$Y_{i} = \alpha_{r}  + \beta \mathds{1}(i \text{ is Rotator}) + \epsilon_{i}$$
 
-
-In general, we will describe (approximate) power as a function of sample size and effect size, and it will be a non-decreasing function in this two arguments.
-
-
-![Power](https://raw.githubusercontent.com/isaacmeza/power_simulations/main/pwr.png)
-
-In this repository you can find several examples of power simulations of varying complexity.
+clustering standard errors at the region level.
