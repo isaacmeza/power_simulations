@@ -3,7 +3,7 @@
 We run power simulations for the main specification in [Expanding Financial Access Via Credit Cards:Evidence from Mexico](www.diegojimenezh.com/assets/pdf/creditcards_main.pdf)
 
 
---
+---
 
 
 For different effect sizes $\beta_t$, and $\gamma_t$, we will be producing synthetic data and estimating the main specification on this simulated data to approximate its power.
