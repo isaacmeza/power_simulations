@@ -11,4 +11,4 @@ The variables denote the following
 			
 The interpretation is as follows:
 
-Receiving treatment (Z) (with probability `p_treat') increases the probability of the dependent variable (X) by \beta_{FS} in average from a baseline probability of `p_baseline'. Within each cell `m' replications are run to estimate the power.
+Receiving treatment (Z) (with probability 'p_treat') increases the probability of the dependent variable (X) by $\beta_{FS}$ in average from a baseline probability of 'p_baseline'. Within each cell 'm' replications are run to estimate the power.
