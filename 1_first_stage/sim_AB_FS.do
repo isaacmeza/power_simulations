@@ -53,9 +53,6 @@ local m=1000
 local p_baseline=0.64
 *Probability of treatment
 local p_treat=0.5
-*Probability of attrition
-local p_attrition=0.32
-local diff_attrition=-0.0
 *Significance level
 local signif=0.051
 *Grid for beta_fs (FS)
@@ -107,11 +104,6 @@ local pb=0
 				qui replace y=(uniform()<=`p_baseline') if zz==0
 					*ATT
 				qui replace y=(uniform()<=`p_baseline'+yy) if zz==1
-
-				*Drop observations with attrition
-				qui replace y=. if  (uniform()<=`p_attrition') & zz==0
-					*Differential attrition
-				qui replace y=. if  (uniform()<=`p_attrition'+`diff_attrition') & zz==1
 				
 				*IVREG
 				qui reg y zz, r  
